@@ -1,47 +1,676 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-<title>Terraria</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="Terraria fan website">
-  <meta name="keywords" content="Terraria, CSS, WitroxHunter">
-  <meta name="author" content="Wiktor Jankiewicz">
-  <meta name="copyright" content="(c) Wiktor Jankiewicz 2021">
-  <link rel="stylesheet" href="style.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolorki</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.gif"></a>
+    </header>
+    <section class="lewo">
+        <img src="https://media.discordapp.net/attachments/935989994735169546/975018659217031288/image0-1-2.gif">
+    </section>
+    <main id="main">
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
+        <div id="6"></div>
+        <div id="7"></div>
+        <div id="8"></div>
+        <div id="9"></div>
+        <div id="10"></div>
+        <div id="11"></div>
+        <div id="12"></div>
+    </main>     
+    <section class="prawo">
+        <img src="https://media.discordapp.net/attachments/935989994735169546/975018659217031288/image0-1-2.gif">
+    </section>
+    <footer>
+        <h1 id="a"></h1>
+        Jak wygrasz, napisz do Wiktorek#0119, wyślij screen potwierdzający
+    </footer>
+    <script>
+        var kwadrat1 = document.getElementById("1");
+        var kwadrat2 = document.getElementById("2");
+        var kwadrat3 = document.getElementById("3");
+        var kwadrat4 = document.getElementById("4");
+        var kwadrat5 = document.getElementById("5");
+        var kwadrat6 = document.getElementById("6");
+        var kwadrat7 = document.getElementById("7");
+        var kwadrat8 = document.getElementById("8");
+        var kwadrat9 = document.getElementById("9");
+        var kwadrat10 = document.getElementById("10");
+        var kwadrat11 = document.getElementById("11");
+        var kwadrat12 = document.getElementById("12");
 
-<body background="bg.jpg">
-<center>
-<img class="terraria" src="terraria logo.png">
-<br>
-<div class="parent">
-<div class="child">
-<a href="https://store.steampowered.com/app/105600/">Buy!</a>
-</div>
-<div class="child2">
-<a href="Terraria_opcje.html">
-<img src="hamburger.png" height="75">
-</a>
-</div>
-<div class="child3">
-<a href="https://terraria.org/about"> 
-<img src="question.png" height="80">
-</a>
-</div>
+        var tru1 = 0;
+        var tru2 = 0;
+        var tru3 = 0;
+        var tru4 = 0;
+        var tru5 = 0;
+        var tru6 = 0;
+        var tru7 = 0;
+        var tru8 = 0;
+        var tru9 = 0;
+        var tru10 = 0;
+        var tru11 = 0;
+        var tru12 = 0;
 
-<div class="child4">
-<font size="6">Dig, Fight, Build!</font><br>
-The very world is at your fingertips as you fight for survival, fortune, and glory. 
-Delve deep into cavernous expanses, seek out ever-greater foes to test your mettle in combat, 
-or construct your own city - In the World of Terraria, the choice is yours!
-Blending elements of classic action games with the freedom of sandbox-style creativity, 
-Terraria is a unique gaming experience where both the journey and the destination are as unique as the players themselves!
-</div>
-</div>
-<div id="footer">
-Website by Wiktor Jankiewicz. Terraria is owned by Re-Logic. Offical site: https://terraria.org/ 
-</div>
-</center>
+        var zdania = [
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/975018659217031288/image0-1-2.gif'>",
+            "&nbsp;&nbsp;&nbsp;&nbsp;i &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;love &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css",
+            "<img src='images/kubi.png'>",
+            "<img src='images/2.jpg'>",
+            "<img src='images/2.png '>",
+            "<img src='images/3.jpg '>",
+            "<img src='images/4.png '>",
+            "<img src='images/5.png '>",
+            "<img src='images/6.gif '>",
+            "<img src='images/7.jpg '>",
+            "<img src='images/8.gif '>",
+            "<img src='images/9.png '>",
+            "<img src='images/10.png '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/970306880662548520/hangingskeletonanimation-7.gif '>",
+            "<img src='https://media.tenor.com/26aVBzrJ568AAAAi/nerd-speech-bubble.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/966100417362665532/caption-18-1.gif '>",
+            "<img src='https://media.discordapp.net/attachments/830755385295765554/959878228351287316/SPOILER_image0.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1052031738802618418/DD74C526-BB05-41A7-8232-14733EDDDB7E.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1063894318789710005/image0-8-1-1-1.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/977948110506573845/image0-4-2.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/970021324607090718/6681BAEC-3B6E-4E18-AC0F-15C56D693774.gif'>",
+            "<img src='https://media.discordapp.net/attachments/245001780138606593/1028871920147501076/image0.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1003966381395562526/7739BBDE-EE5E-4D29-8B73-CF7ECF188B3B.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/963456216921682000/3x_2.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1017073461467824198/1662406261877607.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/940585393290620938/040B1A88-2EDD-4A24-996C-C423663BA55D.gif'>",
+            "<img src='https://media.discordapp.net/attachments/830755385295765554/1054959241812783104/received_627036535863089.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1040020738733781053/D61D901E-AB43-4DE9-9C7E-727594386704.gif'>",
+            "<img src='https://cdn.discordapp.com/attachments/928219692051599430/1110667799048749116/bea47c005b764bd20541bf73425029a4.png '>",
+            "<img src='https://media.discordapp.net/attachments/861984612599332874/1110485501804302377/Math3.gif'>",
+            "<img src='https://cdn.discordapp.com/attachments/861984612599332874/1116031179888525343/IMG_20230607_174908.jpg '>",
+            "<img src='https://cdn.discordapp.com/attachments/861984612599332874/1116295581418131456/FB_IMG_1686215995836.jpg '>",
+            "<img src='https://cdn.discordapp.com/attachments/861984612599332874/1116431840320946177/HZaKo1G56c.png'>",
+            "<img src='https://cdn.discordapp.com/attachments/861984612599332874/1116436364951552130/FB_IMG_1685264696505.jpg '>",
+            "<img src='https://cdn.discordapp.com/attachments/928219692051599430/1116435502598455456/image.png'>",
+            "<img src='https://media.discordapp.net/attachments/949311040154398730/1105959006566097028/4D73EFC0-CA10-4472-965E-2E815E8AB7BE.gif'>",
+            "<img src='https://media.discordapp.net/attachments/625774709778415617/662016115580469248/0041.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1020659641207762944/image0-2-1.gif'>",
+            "<img src='https://media.discordapp.net/attachments/895381678904737812/895412815261728858/obama_walker.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1095397489827389440/115DA60B-5DCA-4F80-8B47-040CDA1AB257.gif'>",
+            "<img src='https://media.discordapp.net/attachments/928219692051599430/1059543727556804628/64983E4B-85DF-4273-B602-3DE3E99EED80.gif'>",
+            "<img src='https://media.discordapp.net/attachments/349276154118799391/1053433831732031619/bagieta.gif'>",
+            "<img src='https://media.discordapp.net/attachments/1092218451306754068/1103024324656513147/attachment.gif'>",
+            "<img src='https://media.discordapp.net/attachments/1084171848658464878/1106140323693989898/unknown-1.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/990288434314756176/caption.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1057265625111740506/caption-3-1.gif '>",
+            "<img src='https://cdn.discordapp.com/attachments/1092217480778350673/1116385667551867041/image.png '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1053773106864463912/8CBFF220-8E52-45CF-898E-2BE985C0C3B3.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1005055151725351032/92194F3B-CE01-462C-BD67-2E5B2F4DE220.gif'>",
+            "<img src='https://media.discordapp.net/attachments/877631060173783140/975452704728027136/caption-4.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1028651197915213906/IMG_7313.gif '>",
+            "<img src='https://media.discordapp.net/attachments/953396398898950214/1067167859412844644/ezgif-4-d342d1f6e4.gif'>",
+            "<img src='https://media.discordapp.net/attachments/861984612599332874/1061343171310784562/auto-spicz.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1115737079628972082/mxyzhUkW.gif'>",
+            "<img src='https://media.discordapp.net/attachments/470246446306820096/1052728973454495764/ezgif-6-d1833d5f7a4b.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1116417549995876473/ultrakill-minos.gif '>",
+            "<img src='https://media.discordapp.net/attachments/609073992833433620/1023006096325091419/20220922_143319.gif'>",
+            "<img src='https://media.discordapp.net/attachments/808730770792513554/994614538848706681/2C01A17D-EAF4-467A-A61A-FF721C3A71C0-1-1-1.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1057673692412379186/900F2046-7818-4430-90F7-E4A2F4444412.gif'>",
+            "<img src='https://media.discordapp.net/attachments/861984612599332874/967746472743407626/cooltext409407561887667.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/974732479892164618/RDT_20210830_135006867986323842488992-1.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/974338147750125578/b5f2c7250f1af9e8da7566ced2c6c10d6efecef9r1-320-235_00.gif '>",
+            "<img src='https://media.discordapp.net/attachments/861984612599332874/1074332375418417266/attachment.gif '>",
+            "<img src='https://media.discordapp.net/attachments/807809192537882647/1063117395306217562/attachment-2-3.gif '>",
+            "<img src='https://media.discordapp.net/attachments/937458666548920330/1069754555895652382/attachment.gif'>",
+            "<img src='https://cdn.discordapp.com/emojis/854413554501025833.gif?size=96&quality=lossless'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/972072650363011132/ezgif-3-07c82b7f2ff7.gif'>",
+            "<img src='https://media.discordapp.net/attachments/804310067742375978/971407735193214976/caption.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/949668339066740776/dfe.gif'>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1057265961104850974/yahav-mother-encore.gif '>",
+            "<img src='https://media.discordapp.net/attachments/710745951236522019/962383279607123988/SKULLLL.gif '>",
+            "<img src='https://media.giphy.com/media/xk9ShorjVUJjjSZY63/giphy-downsized-large.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/941585873529630720/memes.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/960916697915740170/20210606_220826.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1047451490379378728/BCE2213A-756F-4144-9AED-F3D1D9595307.gif '>",
+            "<img src='https://media.discordapp.net/attachments/1053792555394941079/1055201558947692634/6cwnsbtfti6a1.gif'>",
+            "<img src='https://media.discordapp.net/attachments/830755385295765554/1068207433861824553/attachment.gif '>",
+            "<img src='https://media.discordapp.net/attachments/753683019545575454/935140153662537798/caption.gif '>",
+            "<img src='https://media.discordapp.net/attachments/830755385295765554/937144944731254864/F37754C0-F70E-44A3-BEEE-78D0AB3AEFA5.gif '>",
+            "<img src='https://media.discordapp.net/attachments/830755385295765554/1068207433861824553/attachment.gif'>",
+            "<img src='https://media.discordapp.net/attachments/822372912131604501/822484978637340772/mapka_mirus.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/979749092257321040/received_3397560046959831.gif '>",
+            "<img src='https://media.discordapp.net/attachments/349276154118799391/836628315707408435/image0-2.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1059848795141177344/45_20221030214154.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/1057302384071684187/214266B6-471B-49B3-B8B2-9EEB646AA6C8.gif '>",
+            "<img src='https://media.discordapp.net/attachments/935989994735169546/961217588292116480/crackhead.gif '>",
+            "<img src='https://media.discordapp.net/attachments/861984612599332874/1051598364455751740/poznan.gif '>",
+            "<img src='https://media.discordapp.net/attachments/830755385295765554/1074069983266603118/attachment.gif '>",
+            "<img src='https://media.discordapp.net/attachments/663109446846906388/925830905052942336/among_balls.gif '>",
+            "<img src='https://media.discordapp.net/attachments/673907122022383678/912092312673329182/image0-30-1_1.gif '>",
+            "<img src='https://c.tenor.com/WI_dKIOlK0YAAAAM/cursed-troll-face-troll-face.gif '>",
+            "<img src='https://media.discordapp.net/attachments/710745951236522019/939111411802583080/caption.gif '>",
+            "<img src='https://cdn.discordapp.com/attachments/567355474492522527/889955662442950676/image0.gif '>",
+             "<img src='https://cdn.discordapp.com/attachments/258069334964961281/738510621045424208/spirit.gif '>",
+            "<img src='https://media.discordapp.net/attachments/587487042200535054/831259533811777576/image0.gif '>",
+            "<img src='https://media.discordapp.net/attachments/830755385295765554/958108938543431830/pook.gif '>",
+            "<img src='https://media.discordapp.net/attachments/902686394663714867/943138334555926569/0760A62B-4B62-4431-B4FD-FABDE08659EB.gif '>",
+             "<img src='https://media.discordapp.net/attachments/704479553036484638/875343350268583966/image0-1.gif '>",
+            "<img src='https://media.discordapp.net/attachments/710745951236522019/959910339057696798/pullotus.gif '>",
+            "<img src='https://media.discordapp.net/attachments/710745951236522019/964988280997302292/5862606B-ACA5-46D1-8C29-55566FED83C4-1.gif '>",
+            "<img src='https://media.discordapp.net/attachments/802947034326892564/873952947061522503/image0.gif '>",
+            "<img src='https://c.tenor.com/MJryiUV-zDsAAAAM/jp2gmd-pope-john-paul.gif '>",
+            "<img src='https://media.discordapp.net/attachments/831962739018301473/939296379237433404/epic_embed_fail.gif '>",
+            "<img src='https://media.discordapp.net/attachments/751485759751716877/802033682558877716/image0-2-1-1.gif '>",
+            "<img src='https://media.discordapp.net/attachments/985943436752478238/1059999347821002762/bottom_1_1-1.gif '>",
+            "<img src='https://media.discordapp.net/attachments/831962739018301473/949681719743758376/phase3.gif '>",
+            "<img src='https://media.discordapp.net/attachments/830755385295765554/974331140041220146/What_The-1.gif '>",
+            "<img src='https://media.discordapp.net/attachments/831962739018301473/917525585343963166/ezgif-3-d16583bad15f.gif '>",
+            "<img src='https://media.discordapp.net/attachments/861984612599332874/943875088485331015/wiktktororororo.gif '>",
+            "<img src='https://cdn.discordapp.com/attachments/1092217480778350673/1116453135653814302/image.png '>",
 
+        ];
+
+        var randomNum1 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum2 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum3 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum4 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum5 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum6 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum7 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum8 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum9 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum10 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum11 = Math.floor(Math.random() * zdania.length) + 1;
+        var randomNum12 = Math.floor(Math.random() * zdania.length) + 1;
+
+        var selectedElement1 = zdania[randomNum1 - 1];
+        var selectedElement2 = zdania[randomNum2 - 1];
+        var selectedElement3 = zdania[randomNum3 - 1];
+        var selectedElement4 = zdania[randomNum4 - 1];
+        var selectedElement5 = zdania[randomNum5 - 1];
+        var selectedElement6 = zdania[randomNum6 - 1];
+        var selectedElement7 = zdania[randomNum7 - 1];
+        var selectedElement8 = zdania[randomNum8 - 1];
+        var selectedElement9 = zdania[randomNum9 - 1];
+        var selectedElement10 = zdania[randomNum10 - 1];
+        var selectedElement11 = zdania[randomNum11 - 1];
+        var selectedElement12 = zdania[randomNum12 - 1];
+
+        kwadrat1.onclick = function() {
+            if (tru1 == 0) {
+                tru1 = 1;
+                kwadrat1.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat1.classList.remove("rotate-animation");
+                        kwadrat1.style = "background-image: none;";
+                        kwadrat1.innerHTML = selectedElement1; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru1 == 1) {
+                tru1 = 0;
+                kwadrat1.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat1.classList.remove("rotate-animation");
+                        kwadrat1.style = "background-image: url('images/1.png');";
+                        kwadrat1.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat2.onclick = function() {
+            if (tru2 == 0) {
+                tru2 = 1;
+                kwadrat2.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat2.classList.remove("rotate-animation");
+                        kwadrat2.style = "background-image: none;";
+                        kwadrat2.innerHTML = selectedElement2; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru2 == 1) {
+                tru2 = 0;
+                kwadrat2.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat2.classList.remove("rotate-animation");
+                        kwadrat2.style = "background-image: url('images/1.png');";
+                        kwadrat2.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat3.onclick = function() {
+            if (tru3 == 0) {
+                tru3 = 1;
+                kwadrat3.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat3.classList.remove("rotate-animation");
+                        kwadrat3.style = "background-image: none;";
+                        kwadrat3.innerHTML = selectedElement3; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru3 == 1) {
+                tru3 = 0;
+                kwadrat3.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat3.classList.remove("rotate-animation");
+                        kwadrat3.style = "background-image: url('images/1.png');";
+                        kwadrat3.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat4.onclick = function() {
+            if (tru4 == 0) {
+                tru4 = 1;
+                kwadrat4.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat4.classList.remove("rotate-animation");
+                        kwadrat4.style = "background-image: none;";
+                        kwadrat4.innerHTML = selectedElement4; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru4 == 1) {
+                tru4 = 0;
+                kwadrat4.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat4.classList.remove("rotate-animation");
+                        kwadrat4.style = "background-image: url('images/1.png');";
+                        kwadrat4.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat5.onclick = function() {
+            if (tru5 == 0) {
+                tru5 = 1;
+                kwadrat5.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat5.classList.remove("rotate-animation");
+                        kwadrat5.style = "background-image: none;";
+                        kwadrat5.innerHTML = selectedElement5; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru5 == 1) {
+                tru5 = 0;
+                kwadrat5.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat5.classList.remove("rotate-animation");
+                        kwadrat5.style = "background-image: url('images/1.png');";
+                        kwadrat5.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat6.onclick = function() {
+            if (tru6 == 0) {
+                tru6 = 1;
+                kwadrat6.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat6.classList.remove("rotate-animation");
+                        kwadrat6.style = "background-image: none;";
+                        kwadrat6.innerHTML = selectedElement6; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru6 == 1) {
+                tru6 = 0;
+                kwadrat6.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat6.classList.remove("rotate-animation");
+                        kwadrat6.style = "background-image: url('images/1.png');";
+                        kwadrat6.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat7.onclick = function() {
+            if (tru7 == 0) {
+                tru7 = 1;
+                kwadrat7.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat7.classList.remove("rotate-animation");
+                        kwadrat7.style = "background-image: none;";
+                        kwadrat7.innerHTML = selectedElement7; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru7 == 1) {
+                tru7 = 0;
+                kwadrat7.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat7.classList.remove("rotate-animation");
+                        kwadrat7.style = "background-image: url('images/1.png');";
+                        kwadrat7.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat8.onclick = function() {
+            if (tru8 == 0) {
+                tru8 = 1;
+                kwadrat8.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat8.classList.remove("rotate-animation");
+                        kwadrat8.style = "background-image: none;";
+                        kwadrat8.innerHTML = selectedElement8; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru8 == 1) {
+                tru8 = 0;
+                kwadrat8.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat8.classList.remove("rotate-animation");
+                        kwadrat8.style = "background-image: url('images/1.png');";
+                        kwadrat8.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat9.onclick = function() {
+            if (tru9 == 0) {
+                tru9 = 1;
+                kwadrat9.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat9.classList.remove("rotate-animation");
+                        kwadrat9.style = "background-image: none;";
+                        kwadrat9.innerHTML = selectedElement9; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru9 == 1) {
+                tru9 = 0;
+                kwadrat9.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat9.classList.remove("rotate-animation");
+                        kwadrat9.style = "background-image: url('images/1.png');";
+                        kwadrat9.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat10.onclick = function() {
+            if (tru10 == 0) {
+                tru10 = 1;
+                kwadrat10.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat10.classList.remove("rotate-animation");
+                        kwadrat10.style = "background-image: none;";
+                        kwadrat10.innerHTML = selectedElement10; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru10 == 1) {
+                tru10 = 0;
+                kwadrat10.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat10.classList.remove("rotate-animation");
+                        kwadrat10.style = "background-image: url('images/1.png');";
+                        kwadrat10.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat11.onclick = function() {
+            if (tru11 == 0) {
+                tru11 = 1;
+                kwadrat11.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat11.classList.remove("rotate-animation");
+                        kwadrat11.style = "background-image: none;";
+                        kwadrat11.innerHTML = selectedElement11; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru11 == 1) {
+                tru11 = 0;
+                kwadrat11.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat11.classList.remove("rotate-animation");
+                        kwadrat11.style = "background-image: url('images/1.png');";
+                        kwadrat11.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        kwadrat12.onclick = function() {
+            if (tru12 == 0) {
+                tru12 = 1;
+                kwadrat12.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat12.classList.remove("rotate-animation");
+                        kwadrat12.style = "background-image: none;";
+                        kwadrat12.innerHTML = selectedElement12; // TU WPISZ KARTE
+                    }, 700);  
+            } else if (tru12 == 1) {
+                tru12 = 0;
+                kwadrat12.classList.add("rotate-animation");
+                    setTimeout(function() {
+                        kwadrat12.classList.remove("rotate-animation");
+                        kwadrat12.style = "background-image: url('images/1.png');";
+                        kwadrat12.innerHTML = "";
+                    }, 700);       
+            }
+        };
+
+        var main = document.getElementById("main");
+        main.onclick = function () {
+            console.log("dupa");
+            if (
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum3 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum4 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum5 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum6 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum7 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum8 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum9 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum10 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum2 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum4 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum5 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum6 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum7 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum8 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum9 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum10 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum3 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum4 === 1 && randomNum5 === 1) ||
+            (randomNum1 === 1 && randomNum4 === 1 && randomNum6 === 1) ||
+            (randomNum1 === 1 && randomNum4 === 1 && randomNum7 === 1) ||
+            (randomNum1 === 1 && randomNum4 === 1 && randomNum8 === 1) ||
+            (randomNum1 === 1 && randomNum4 === 1 && randomNum9 === 1) ||
+            (randomNum1 === 1 && randomNum4 === 1 && randomNum10 === 1) ||
+            (randomNum1 === 1 && randomNum4 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum4 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum5 === 1 && randomNum6 === 1) ||
+            (randomNum1 === 1 && randomNum5 === 1 && randomNum7 === 1) ||
+            (randomNum1 === 1 && randomNum5 === 1 && randomNum8 === 1) ||
+            (randomNum1 === 1 && randomNum5 === 1 && randomNum9 === 1) ||
+            (randomNum1 === 1 && randomNum5 === 1 && randomNum10 === 1) ||
+            (randomNum1 === 1 && randomNum5 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum5 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum6 === 1 && randomNum7 === 1) ||
+            (randomNum1 === 1 && randomNum6 === 1 && randomNum8 === 1) ||
+            (randomNum1 === 1 && randomNum6 === 1 && randomNum9 === 1) ||
+            (randomNum1 === 1 && randomNum6 === 1 && randomNum10 === 1) ||
+            (randomNum1 === 1 && randomNum6 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum6 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum7 === 1 && randomNum8 === 1) ||
+            (randomNum1 === 1 && randomNum7 === 1 && randomNum9 === 1) ||
+            (randomNum1 === 1 && randomNum7 === 1 && randomNum10 === 1) ||
+            (randomNum1 === 1 && randomNum7 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum7 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum8 === 1 && randomNum9 === 1) ||
+            (randomNum1 === 1 && randomNum8 === 1 && randomNum10 === 1) ||
+            (randomNum1 === 1 && randomNum8 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum8 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum9 === 1 && randomNum10 === 1) ||
+            (randomNum1 === 1 && randomNum9 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum9 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum1 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum1 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum4 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum5 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum6 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum7 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum8 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum9 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum10 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum11 === 1) ||
+            (randomNum2 === 1 && randomNum3 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum4 === 1 && randomNum5 === 1) ||
+            (randomNum2 === 1 && randomNum4 === 1 && randomNum6 === 1) ||
+            (randomNum2 === 1 && randomNum4 === 1 && randomNum7 === 1) ||
+            (randomNum2 === 1 && randomNum4 === 1 && randomNum8 === 1) ||
+            (randomNum2 === 1 && randomNum4 === 1 && randomNum9 === 1) ||
+            (randomNum2 === 1 && randomNum4 === 1 && randomNum10 === 1) ||
+            (randomNum2 === 1 && randomNum4 === 1 && randomNum11 === 1) ||
+            (randomNum2 === 1 && randomNum4 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum5 === 1 && randomNum6 === 1) ||
+            (randomNum2 === 1 && randomNum5 === 1 && randomNum7 === 1) ||
+            (randomNum2 === 1 && randomNum5 === 1 && randomNum8 === 1) ||
+            (randomNum2 === 1 && randomNum5 === 1 && randomNum9 === 1) ||
+            (randomNum2 === 1 && randomNum5 === 1 && randomNum10 === 1) ||
+            (randomNum2 === 1 && randomNum5 === 1 && randomNum11 === 1) ||
+            (randomNum2 === 1 && randomNum5 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum6 === 1 && randomNum7 === 1) ||
+            (randomNum2 === 1 && randomNum6 === 1 && randomNum8 === 1) ||
+            (randomNum2 === 1 && randomNum6 === 1 && randomNum9 === 1) ||
+            (randomNum2 === 1 && randomNum6 === 1 && randomNum10 === 1) ||
+            (randomNum2 === 1 && randomNum6 === 1 && randomNum11 === 1) ||
+            (randomNum2 === 1 && randomNum6 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum7 === 1 && randomNum8 === 1) ||
+            (randomNum2 === 1 && randomNum7 === 1 && randomNum9 === 1) ||
+            (randomNum2 === 1 && randomNum7 === 1 && randomNum10 === 1) ||
+            (randomNum2 === 1 && randomNum7 === 1 && randomNum11 === 1) ||
+            (randomNum2 === 1 && randomNum7 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum8 === 1 && randomNum9 === 1) ||
+            (randomNum2 === 1 && randomNum8 === 1 && randomNum10 === 1) ||
+            (randomNum2 === 1 && randomNum8 === 1 && randomNum11 === 1) ||
+            (randomNum2 === 1 && randomNum8 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum9 === 1 && randomNum10 === 1) ||
+            (randomNum2 === 1 && randomNum9 === 1 && randomNum11 === 1) ||
+            (randomNum2 === 1 && randomNum9 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum2 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum2 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum3 === 1 && randomNum4 === 1 && randomNum5 === 1) ||
+            (randomNum3 === 1 && randomNum4 === 1 && randomNum6 === 1) ||
+            (randomNum3 === 1 && randomNum4 === 1 && randomNum7 === 1) ||
+            (randomNum3 === 1 && randomNum4 === 1 && randomNum8 === 1) ||
+            (randomNum3 === 1 && randomNum4 === 1 && randomNum9 === 1) ||
+            (randomNum3 === 1 && randomNum4 === 1 && randomNum10 === 1) ||
+            (randomNum3 === 1 && randomNum4 === 1 && randomNum11 === 1) ||
+            (randomNum3 === 1 && randomNum4 === 1 && randomNum12 === 1) ||
+            (randomNum3 === 1 && randomNum5 === 1 && randomNum6 === 1) ||
+            (randomNum3 === 1 && randomNum5 === 1 && randomNum7 === 1) ||
+            (randomNum3 === 1 && randomNum5 === 1 && randomNum8 === 1) ||
+            (randomNum3 === 1 && randomNum5 === 1 && randomNum9 === 1) ||
+            (randomNum3 === 1 && randomNum5 === 1 && randomNum10 === 1) ||
+            (randomNum3 === 1 && randomNum5 === 1 && randomNum11 === 1) ||
+            (randomNum3 === 1 && randomNum5 === 1 && randomNum12 === 1) ||
+            (randomNum3 === 1 && randomNum6 === 1 && randomNum7 === 1) ||
+            (randomNum3 === 1 && randomNum6 === 1 && randomNum8 === 1) ||
+            (randomNum3 === 1 && randomNum6 === 1 && randomNum9 === 1) ||
+            (randomNum3 === 1 && randomNum6 === 1 && randomNum10 === 1) ||
+            (randomNum3 === 1 && randomNum6 === 1 && randomNum11 === 1) ||
+            (randomNum3 === 1 && randomNum6 === 1 && randomNum12 === 1) ||
+            (randomNum3 === 1 && randomNum7 === 1 && randomNum8 === 1) ||
+            (randomNum3 === 1 && randomNum7 === 1 && randomNum9 === 1) ||
+            (randomNum3 === 1 && randomNum7 === 1 && randomNum10 === 1) ||
+            (randomNum3 === 1 && randomNum7 === 1 && randomNum11 === 1) ||
+            (randomNum3 === 1 && randomNum7 === 1 && randomNum12 === 1) ||
+            (randomNum3 === 1 && randomNum8 === 1 && randomNum9 === 1) ||
+            (randomNum3 === 1 && randomNum8 === 1 && randomNum10 === 1) ||
+            (randomNum3 === 1 && randomNum8 === 1 && randomNum11 === 1) ||
+            (randomNum3 === 1 && randomNum8 === 1 && randomNum12 === 1) ||
+            (randomNum3 === 1 && randomNum9 === 1 && randomNum10 === 1) ||
+            (randomNum3 === 1 && randomNum9 === 1 && randomNum11 === 1) ||
+            (randomNum3 === 1 && randomNum9 === 1 && randomNum12 === 1) ||
+            (randomNum3 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum3 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum3 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum4 === 1 && randomNum5 === 1 && randomNum6 === 1) ||
+            (randomNum4 === 1 && randomNum5 === 1 && randomNum7 === 1) ||
+            (randomNum4 === 1 && randomNum5 === 1 && randomNum8 === 1) ||
+            (randomNum4 === 1 && randomNum5 === 1 && randomNum9 === 1) ||
+            (randomNum4 === 1 && randomNum5 === 1 && randomNum10 === 1) ||
+            (randomNum4 === 1 && randomNum5 === 1 && randomNum11 === 1) ||
+            (randomNum4 === 1 && randomNum5 === 1 && randomNum12 === 1) ||
+            (randomNum4 === 1 && randomNum6 === 1 && randomNum7 === 1) ||
+            (randomNum4 === 1 && randomNum6 === 1 && randomNum8 === 1) ||
+            (randomNum4 === 1 && randomNum6 === 1 && randomNum9 === 1) ||
+            (randomNum4 === 1 && randomNum6 === 1 && randomNum10 === 1) ||
+            (randomNum4 === 1 && randomNum6 === 1 && randomNum11 === 1) ||
+            (randomNum4 === 1 && randomNum6 === 1 && randomNum12 === 1) ||
+            (randomNum4 === 1 && randomNum7 === 1 && randomNum8 === 1) ||
+            (randomNum4 === 1 && randomNum7 === 1 && randomNum9 === 1) ||
+            (randomNum4 === 1 && randomNum7 === 1 && randomNum10 === 1) ||
+            (randomNum4 === 1 && randomNum7 === 1 && randomNum11 === 1) ||
+            (randomNum4 === 1 && randomNum7 === 1 && randomNum12 === 1) ||
+            (randomNum4 === 1 && randomNum8 === 1 && randomNum9 === 1) ||
+            (randomNum4 === 1 && randomNum8 === 1 && randomNum10 === 1) ||
+            (randomNum4 === 1 && randomNum8 === 1 && randomNum11 === 1) ||
+            (randomNum4 === 1 && randomNum8 === 1 && randomNum12 === 1) ||
+            (randomNum4 === 1 && randomNum9 === 1 && randomNum10 === 1) ||
+            (randomNum4 === 1 && randomNum9 === 1 && randomNum11 === 1) ||
+            (randomNum4 === 1 && randomNum9 === 1 && randomNum12 === 1) ||
+            (randomNum4 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum4 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum4 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum5 === 1 && randomNum6 === 1 && randomNum7 === 1) ||
+            (randomNum5 === 1 && randomNum6 === 1 && randomNum8 === 1) ||
+            (randomNum5 === 1 && randomNum6 === 1 && randomNum9 === 1) ||
+            (randomNum5 === 1 && randomNum6 === 1 && randomNum10 === 1) ||
+            (randomNum5 === 1 && randomNum6 === 1 && randomNum11 === 1) ||
+            (randomNum5 === 1 && randomNum6 === 1 && randomNum12 === 1) ||
+            (randomNum5 === 1 && randomNum7 === 1 && randomNum8 === 1) ||
+            (randomNum5 === 1 && randomNum7 === 1 && randomNum9 === 1) ||
+            (randomNum5 === 1 && randomNum7 === 1 && randomNum10 === 1) ||
+            (randomNum5 === 1 && randomNum7 === 1 && randomNum11 === 1) ||
+            (randomNum5 === 1 && randomNum7 === 1 && randomNum12 === 1) ||
+            (randomNum5 === 1 && randomNum8 === 1 && randomNum9 === 1) ||
+            (randomNum5 === 1 && randomNum8 === 1 && randomNum10 === 1) ||
+            (randomNum5 === 1 && randomNum8 === 1 && randomNum11 === 1) ||
+            (randomNum5 === 1 && randomNum8 === 1 && randomNum12 === 1) ||
+            (randomNum5 === 1 && randomNum9 === 1 && randomNum10 === 1) ||
+            (randomNum5 === 1 && randomNum9 === 1 && randomNum11 === 1) ||
+            (randomNum5 === 1 && randomNum9 === 1 && randomNum12 === 1) ||
+            (randomNum5 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum5 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum5 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum6 === 1 && randomNum7 === 1 && randomNum8 === 1) ||
+            (randomNum6 === 1 && randomNum7 === 1 && randomNum9 === 1) ||
+            (randomNum6 === 1 && randomNum7 === 1 && randomNum10 === 1) ||
+            (randomNum6 === 1 && randomNum7 === 1 && randomNum11 === 1) ||
+            (randomNum6 === 1 && randomNum7 === 1 && randomNum12 === 1) ||
+            (randomNum6 === 1 && randomNum8 === 1 && randomNum9 === 1) ||
+            (randomNum6 === 1 && randomNum8 === 1 && randomNum10 === 1) ||
+            (randomNum6 === 1 && randomNum8 === 1 && randomNum11 === 1) ||
+            (randomNum6 === 1 && randomNum8 === 1 && randomNum12 === 1) ||
+            (randomNum6 === 1 && randomNum9 === 1 && randomNum10 === 1) ||
+            (randomNum6 === 1 && randomNum9 === 1 && randomNum11 === 1) ||
+            (randomNum6 === 1 && randomNum9 === 1 && randomNum12 === 1) ||
+            (randomNum6 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum6 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum6 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum7 === 1 && randomNum8 === 1 && randomNum9 === 1) ||
+            (randomNum7 === 1 && randomNum8 === 1 && randomNum10 === 1) ||
+            (randomNum7 === 1 && randomNum8 === 1 && randomNum11 === 1) ||
+            (randomNum7 === 1 && randomNum8 === 1 && randomNum12 === 1) ||
+            (randomNum7 === 1 && randomNum9 === 1 && randomNum10 === 1) ||
+            (randomNum7 === 1 && randomNum9 === 1 && randomNum11 === 1) ||
+            (randomNum7 === 1 && randomNum9 === 1 && randomNum12 === 1) ||
+            (randomNum7 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum7 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum7 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum8 === 1 && randomNum9 === 1 && randomNum10 === 1) ||
+            (randomNum8 === 1 && randomNum9 === 1 && randomNum11 === 1) ||
+            (randomNum8 === 1 && randomNum9 === 1 && randomNum12 === 1) ||
+            (randomNum8 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum8 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum8 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum9 === 1 && randomNum10 === 1 && randomNum11 === 1) ||
+            (randomNum9 === 1 && randomNum10 === 1 && randomNum12 === 1) ||
+            (randomNum9 === 1 && randomNum11 === 1 && randomNum12 === 1) ||
+            (randomNum10 === 1 && randomNum11 === 1 && randomNum12 === 1)) {
+                
+                var a = document.getElementById("a");
+                a.innerHTML = "WYGRAŁEŚ!!!!!";
+        }
+    }
+    </script>
 </body>
 </html>
